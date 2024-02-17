@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Game-Font";
+  src: url("../../../assets/fonts/Game-Font.ttf");
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.pistola {
+  height: 30px;
+  transform: scaleX(-1);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #05c043;
+  border-radius: 25px 5px 5px 25px;
+  box-shadow: 0 0 0.5em rgba(147, 1, 180, 0.884);
+  width: 100%;
+  font-family: "Game-Font", monospace;
+  font-size: xx-large;
+  padding-left: 8px;
+  gap: 1rem;
+}
+
+.card .circle {
+  border-radius: 50%;
+  height: 30px;
+  aspect-ratio: 1;
+  background-color: rgba(0, 0, 0, 0.125);
+}
+
+.card .icon-img {
+  height: 40px;
+}

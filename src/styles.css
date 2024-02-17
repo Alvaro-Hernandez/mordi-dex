@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "get_schwifty";
+  src: url("./assets/fonts/get_schwifty.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "get_schwifty", monospace;
+}

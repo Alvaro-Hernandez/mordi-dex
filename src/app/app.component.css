@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Game-Font";
+  src: url("../assets/fonts/Game-Font.ttf");
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background: linear-gradient(to right, #32de84, #2474a6, #6a42c1);
+  height: 80px;
+  justify-content: space-between;
+}
+
+.repoContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  justify-content: space-around;
+  background-color: #32de85ab;
+  width: 200px;
+  height: 45px;
+  line-height: 50px;
+  border-radius: 30px;
+  border: solid 3px #21284b;
+  cursor: pointer;
+}
+
+.repoContainer a {
+  text-decoration: none;
+  color: #f0fbff;
+}
+
+.titleContainer {
+  display: flex;
+  padding: 0 5px;
+  user-select: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2474a677;
+  width: 400px;
+  height: 45px;
+  border-radius: 30px;
+  color: #f0fbff;
+  border: solid 3px #21284b;
+}
+
+.titleContainer img {
+  width: 50px;
+}
+
+.titleContainer h1 {
+  font-size: 2.5rem;
+  text-shadow: 0 0 0.2em#32de84;
+}
+
+.repoContainer a {
+  font-size: 1.2rem;
+  text-shadow: 0 0 0.2em#32de84;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #f0fbff;
+  background: linear-gradient(to left, #285840, #2474a6, #4e2c99);
+  height: 30px;
+  font-family: "Game-Font", monospace;
+  font-size: 1.3em;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p {
+  color: #fff;
+  margin: 0 20px;
+}
+
+footer kbd {
+  display: inline-block;
+  background-color: #575656;
+  border-radius: 50%;
+  width: 26px;
+  line-height: 26px;
+  text-align: center;
+  aspect-ratio: 1;
+  font-size: xx-large;
+  margin: 0 5px;
+  font-family: "Game-Font", monospace;
+}

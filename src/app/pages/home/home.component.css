@@ -1,0 +1,39 @@
+#container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  height: calc(100vh - 110px);
+  background: repeating-linear-gradient(
+    0deg,
+    #252525 0px,
+    #252525 10px,
+    #373737 10px,
+    #2c3e50 50px,
+    #252525 50px,
+    #252525 60px,
+    #373737 60px,
+    #252525 90px,
+    #373737 90px,
+    #373737 100px,
+    #2c3e50 100px,
+    #2c3e50 140px,
+    #252525 140px,
+    #252525 150px,
+    #373737 150px,
+    #373737 160px,
+    #2c3e50 160px,
+    #2c3e50 170px,
+    #252525 170px,
+    #373737 190px
+  );
+}
+
+app-image-character {
+  margin-left: 50px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
