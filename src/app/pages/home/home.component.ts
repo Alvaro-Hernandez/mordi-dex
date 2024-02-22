@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   currentPage = 1;
   clickedCharacter?: Result;
   charging: boolean = false;
+  detail: boolean = false;
 
   ngOnInit(): void {
     this.loadMoreCharacters();
@@ -51,6 +52,14 @@ export class HomeComponent implements OnInit {
   }
 
   async selectedCharacter(character: number) {
+    if (this.clickedCharacter?.id === character) {
+      this.changeCardDetail();
+      return;
+    }
     this.clickedCharacter = await this.apimortyService.getById(character);
+  }
+
+  changeCardDetail() {
+    if (this.clickedCharacter) this.detail = !this.detail;
   }
 }

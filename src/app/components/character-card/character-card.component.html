@@ -1,4 +1,10 @@
-<div id="container" [ngClass]="{ selected: clickedCharacter }">
+<div
+  id="container"
+  [ngClass]="{ selected: clickedCharacter }"
+  [ngStyle]="{
+    color: clickedCharacter ? 'white' : 'black'
+  }"
+>
   <img
     src="../../../assets/img/icons8-pistola-laser-96.png"
     alt=""

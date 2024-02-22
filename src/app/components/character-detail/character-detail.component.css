@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "Game-Font";
+  src: url("../../../assets/fonts/Game-Font.ttf");
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(70, 70, 70, 0.378);
+  z-index: -1;
+  opacity: 1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+}
+
+.container .detail {
+  display: grid;
+  grid-template-rows: 1fr 3fr 2fr;
+  height: 500px;
+  width: 90vw;
+}
+
+.container .detail .area:first-child {
+  flex-grow: 1;
+  background-color: #97ce68;
+  background-image: linear-gradient(
+      45deg,
+      #a7d7a9 25%,
+      transparent 25%,
+      transparent 75%,
+      #a7d7a9 75%,
+      #a7d7a9
+    ),
+    linear-gradient(
+      -45deg,
+      #a7d7a9 25%,
+      transparent 25%,
+      transparent 75%,
+      #a7d7a9 75%,
+      #a7d7a9
+    );
+  background-size: 20px 20px;
+}
+
+.container .detail .area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-left: 45%;
+  padding-right: 20px;
+  font-family: "Game-Font", monospace;
+  background-color: #708d94;
+  color: #ffffff;
+  background-size: 20px 20px;
+  font-size: larger;
+  background-image: linear-gradient(
+      45deg,
+      #8caebf 25%,
+      transparent 25%,
+      transparent 75%,
+      #8caebf 75%,
+      #8caebf
+    ),
+    linear-gradient(
+      -45deg,
+      #8caebf 25%,
+      transparent 25%,
+      transparent 75%,
+      #8caebf 75%,
+      #8caebf
+    );
+  p {
+    margin: 10px 10px;
+    font-size: 2em;
+  }
+}
+
+.container .detail .area:last-child {
+  background: repeating-linear-gradient(
+    0deg,
+    #30373d,
+    #30373d 2px,
+    #424a52 2px,
+    #424a52 4px
+  );
+  p {
+    margin: 20px 10px;
+  }
+}
+
+.ticket {
+  display: inline-block;
+  width: 100px;
+  background-color: #424a52;
+  color: #ffffff;
+  text-shadow: 0 0 0.2em#32de84;
+  border-radius: 5px;
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.character-specie {
+  display: inline-block;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 5px 15px;
+  margin-left: 5px;
+}
+
+.containerDetail {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  background-color: #30373d;
+  box-shadow: 0 0 0.2em#32de84;
+  border-radius: 10px;
+  height: 80%;
+}
+
+.itemDetail {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerDetail .itemDetail p {
+  color: #ffffff;
+  text-shadow: 0 0 0.2em#30373d;
+}
+
+.containerDetail .itemDetail p span {
+  color: #ffffff;
+  text-shadow: 0 0 0.2em#32de84;
+}
+
+.containerDetail div {
+  margin: 5px;
+}
+.containerDetail div:first-child {
+  background-color: #6a42c1;
+  border-radius: 0 8px 8px 0;
+}
+
+.containerDetail div:last-child {
+  background-color: #6a42c1;
+  border-radius: 8px 0 0 8px;
+}
+
+.btn {
+  background-color: #424a52;
+  border-radius: 0 10px 10px 0px;
+  border: unset;
+  cursor: pointer;
+}
+
+.btn img {
+  height: 46px;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.btn .open {
+  rotate: 280deg;
+}
+
+.btn .open:hover {
+  scale: 1.1;
+}

@@ -26,10 +26,46 @@
     #252525 170px,
     #373737 190px
   );
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(236, 234, 92, 0.8);
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 2px rgba(36, 41, 46, 0.8);
+    border-left: 1.5px solid transparent;
+    border-right: 1.5px solid transparent;
+    background-clip: padding-box;
+    cursor: grab;
+  }
+
+  ::-webkit-scrollbar-track {
+    border: solid rgba(144, 172, 231, 0.8) 2px;
+    cursor: pointer;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(39, 109, 131, 0.8),
+      rgba(39, 109, 131, 0.8) 5px,
+      rgba(28, 71, 96, 0.8) 7px,
+      rgba(28, 71, 96, 0.8) 9px
+    );
+  }
 }
 
 app-image-character {
-  margin-left: 80px;
+  margin-left: 90px;
+  z-index: 2;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+app-character-detail {
+  position: absolute;
+  z-index: 1;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .cardContainer {

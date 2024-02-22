@@ -37,6 +37,7 @@
   font-size: xx-large;
   padding-left: 5px;
   margin-left: 30px;
+  cursor: pointer;
   gap: 1rem;
 }
 

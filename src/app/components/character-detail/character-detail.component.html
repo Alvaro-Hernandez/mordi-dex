@@ -1,1 +1,64 @@
-
+<div
+  class="backdrop"
+  [ngStyle]="{
+    opacity: !openDetail ? '0' : '1',
+    'pointer-events': !openDetail ? 'none' : 'auto'
+  }"
+  (click)="closeDetail.emit()"
+></div>
+<div class="container">
+  <div class="detail">
+    <div class="area">
+      <app-character-card
+        [listCharacters]="listCharacters"
+        [clickedCharacter]="true"
+      ></app-character-card>
+    </div>
+    <div class="area">
+      <p>
+        <span class="ticket">Estatus: </span>{{ " "
+        }}{{ listCharacters?.status }}
+      </p>
+      <p>
+        <span class="ticket">Especie: {{ " " }}</span>
+        <span
+          class="character-specie"
+          [ngStyle]="{
+            'background-color': listCharacters
+              ? getSpeciesColor(listCharacters.species)
+              : speciesColors['default']
+          }"
+        >
+          {{ listCharacters?.species }}
+        </span>
+      </p>
+      <p>
+        <span class="ticket">Genero:</span>{{ " " }}
+        {{ listCharacters?.gender }}
+      </p>
+    </div>
+    <div class="area">
+      <div class="containerDetail">
+        <div></div>
+        <div class="itemDetail">
+          <p>
+            <span>Ultima Ubicacion Conocida:</span>
+            {{ listCharacters?.location?.name }}
+          </p>
+          <p>
+            <span>Fecha de Crecion:</span>
+            {{ listCharacters?.created | date : "dd/MM/yyyy" }}
+          </p>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <button class="btn" (click)="closeDetail.emit()">
+    <img
+      src="../.../../../../assets/img/icons8-rick-sanchez-tab.svg"
+      alt="button"
+      [ngClass]="{ open: openDetail }"
+    />
+  </button>
+</div>

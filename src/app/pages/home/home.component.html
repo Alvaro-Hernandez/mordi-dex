@@ -1,6 +1,17 @@
 <main id="container">
+  <app-character-detail
+    [listCharacters]="clickedCharacter"
+    (closeDetail)="changeCardDetail()"
+    [openDetail]="detail"
+    [ngStyle]="{
+      left: detail ? '0' : '-90vw'
+    }"
+  ></app-character-detail>
   <app-image-character
     [clickedCharacter]="clickedCharacter"
+    [ngStyle]="{
+      'margin-left': detail ? '50px' : '90px'
+    }"
   ></app-image-character>
   <div class="cardContainer" (scroll)="onScroll()">
     <app-character-card
