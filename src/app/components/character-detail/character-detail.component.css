@@ -76,10 +76,11 @@
       #8caebf 75%,
       #8caebf
     );
-  p {
-    margin: 10px 10px;
-    font-size: 2em;
-  }
+}
+
+.container .detail .area p {
+  margin: 10px 10px;
+  font-size: 2em;
 }
 
 .container .detail .area:last-child {
@@ -90,9 +91,10 @@
     #424a52 2px,
     #424a52 4px
   );
-  p {
-    margin: 20px 10px;
-  }
+}
+
+.container .detail .area:last-child p {
+  margin: 20px 10px;
 }
 
 .ticket {
