@@ -1,4 +1,7 @@
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 4px solid #fff;
   outline: 12px solid #a09f9f;
   max-width: 400px;
@@ -11,4 +14,9 @@
     #2474a6 15px,
     #2474a6 25px
   );
+}
+
+.characterImage {
+  width: 100%;
+  border-radius: 22px;
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Result } from 'src/app/interfaces/RickApiInterfaces';
 @Component({
   selector: 'app-character-card',
@@ -7,4 +7,6 @@ import { Result } from 'src/app/interfaces/RickApiInterfaces';
 })
 export class CharacterCardComponent {
   @Input() listCharacters?: Result;
+  @Input() clickedCharacter: boolean = false;
+  @Output() selectedCharacter = new EventEmitter<number>();
 }

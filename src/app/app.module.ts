@@ -14,13 +14,10 @@ import { CharacterDetailComponent } from './components/character-detail/characte
     HomeComponent,
     ImageCharacterComponent,
     CharacterCardComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

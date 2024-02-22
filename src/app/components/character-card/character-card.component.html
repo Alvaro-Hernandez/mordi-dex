@@ -1,11 +1,12 @@
-<div class="container">
+<div id="container" [ngClass]="{ selected: clickedCharacter }">
   <img
     src="../../../assets/img/icons8-pistola-laser-96.png"
     alt=""
-    class="pistola"
+    class="gun"
+    *ngIf="clickedCharacter"
   />
 
-  <div class="card">
+  <div class="card" (click)="selectedCharacter.emit(listCharacters?.id)">
     <div class="circle"></div>
     <img src="{{ listCharacters?.image }}" alt="rick" class="icon-img" />
     <span>NO. {{ listCharacters?.id }}</span>

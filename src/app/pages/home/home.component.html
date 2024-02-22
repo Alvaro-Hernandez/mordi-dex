@@ -1,9 +1,13 @@
 <main id="container">
-  <app-image-character></app-image-character>
+  <app-image-character
+    [clickedCharacter]="clickedCharacter"
+  ></app-image-character>
   <div class="cardContainer" (scroll)="onScroll()">
     <app-character-card
       *ngFor="let character of listCharacters"
       [listCharacters]="character"
+      (selectedCharacter)="selectedCharacter($event)"
+      [clickedCharacter]="character.name === clickedCharacter?.name"
     ></app-character-card>
     <img
       class="spinner"

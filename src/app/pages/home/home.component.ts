@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
 
   listCharacters: Result[] = [];
   currentPage = 1;
+  clickedCharacter?: Result;
   charging: boolean = false;
 
   ngOnInit(): void {
@@ -36,7 +37,6 @@ export class HomeComponent implements OnInit {
       this.listCharacters = [...this.listCharacters, ...newCharacters];
       this.currentPage++;
       this.charging = false;
-      console.table(this.listCharacters);
     }, 1000);
   }
 
@@ -48,5 +48,9 @@ export class HomeComponent implements OnInit {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
       this.loadMoreCharacters();
     }
+  }
+
+  async selectedCharacter(character: number) {
+    this.clickedCharacter = await this.apimortyService.getById(character);
   }
 }

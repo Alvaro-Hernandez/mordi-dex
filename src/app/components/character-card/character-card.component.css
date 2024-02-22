@@ -3,17 +3,17 @@
   src: url("../../../assets/fonts/Game-Font.ttf");
 }
 
-.container {
+#container {
   position: relative;
   display: flex;
   align-items: center;
   isolation: isolate;
 }
 
-#selected::before {
+.selected::before {
   position: absolute;
   content: "";
-  width: calc(100% + 8px);
+  width: 98%;
   height: 120%;
   left: 0px;
   background-color: rgba(147, 1, 180, 0.884);
@@ -21,10 +21,10 @@
   z-index: -1;
 }
 
-.pistola {
+.gun {
+  position: absolute;
   height: 30px;
   transform: scaleX(-1);
-  padding: 0 10px;
 }
 
 .card {
@@ -32,11 +32,11 @@
   align-items: center;
   background-color: #05c043;
   border-radius: 25px 5px 5px 25px;
-  box-shadow: 0 0 0.5em rgba(147, 1, 180, 0.884);
-  width: 100%;
+  width: 90%;
   font-family: "Game-Font", monospace;
   font-size: xx-large;
   padding-left: 5px;
+  margin-left: 30px;
   gap: 1rem;
 }
 

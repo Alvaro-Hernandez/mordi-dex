@@ -15,9 +15,9 @@ export class ApimortyService {
     return result.results ?? [];
   }
 
-  async getById(id: number) {
+  async getById(id: number): Promise<Result> {
     const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
     const result = await res.json();
-    console.log(result);
+    return result;
   }
 }
